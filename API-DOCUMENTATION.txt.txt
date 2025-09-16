@@ -1,0 +1,39 @@
+# Weather API Documentation
+
+## What this API does:
+Simple weather data fetching API built with Spring Boot to demonstrate core business logic and API integration concepts.
+
+**Note:** This is a basic implementation focused on business logic flow - no security layers or comprehensive error handling (try-catch) implemented. The goal is to showcase clean API integration and data processing workflow.
+
+## How to use:
+
+**Start the application:**
+Run: `mvn spring-boot:run` or start from your IDE
+Server runs on: http://localhost:8080
+
+**Get weather by city name:**
+GET http://localhost:8080/api/weather?name=chennai&language=en
+- Replace "chennai" with any city name
+- Language options: en (English), es (Spanish), fr (French)
+
+**Get weather by coordinates:**
+GET http://localhost:8080/api/weather/data?lat=13.0827&lon=80.2707
+- Replace lat/lon with any valid coordinates
+
+**Response example:**
+```json
+{
+    "city": "Chennai",
+    "state": "Tamil Nadu", 
+    "temperature": 28.5,
+    "windspeed": 12.3,
+    "isday": 1,
+    "weathercode": 0
+}
+```
+
+**Tech used:** Spring Boot, WebClient, Open-Meteo Weather API
+
+**Project Focus:** Demonstrates API integration patterns, data transformation, and service layer architecture without security complexity - pure business logic showcase.
+ -> Simple implementation 
+ -> Goal is to showcase clean API integration.
